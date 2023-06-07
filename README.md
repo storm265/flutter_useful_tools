@@ -1,5 +1,5 @@
 # flutter_useful_tools
-`lib/`
+`lib/tools/`
 
 `connection_checker_mixin.dart` - checks network status (true,false);
 
