@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
+import 'package:flutter_useful_tools/tools/message_service.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
 
 void main() {
@@ -62,6 +63,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 debugPrint('file ${file.name}');
               },
               child: const Text('Pick file'),
+            ),
+            OutlinedButton(
+              onPressed: () async {
+                MessageService.displaySnackbar(
+                  context: context,
+                  message:
+                      'Hello world Hello worldHello worldHello worldHello worldHello world',
+                );
+              },
+              child: const Text('Show message'),
             ),
             const Text(
               'You have pushed the button this many times:',

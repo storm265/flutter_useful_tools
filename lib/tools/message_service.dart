@@ -14,17 +14,16 @@ class MessageService {
         behavior: SnackBarBehavior.floating,
         backgroundColor: Colors.transparent,
         content: Container(
+          padding: const EdgeInsets.all(4.0),
           width: double.infinity,
           height: 50,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10.0),
+            borderRadius: BorderRadius.circular(12.0),
             color: Colors.black.withOpacity(0.8),
           ),
-          child: Center(
-            child: Text(
-              message,
-              maxLines: null,
-            ),
+          child: Text(
+            message,
+            maxLines: null,
           ),
         ),
         duration: Duration(milliseconds: milliseconds),
