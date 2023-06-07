@@ -35,12 +35,12 @@ class FileProvider {
 
     if (result.files.last.size >= _maxImageSize) {
       result.files.clear();
-      throw 'file_size_is_too_huge';
+      throw 'file is too huge';
     } else if (isValidImage) {
       return pickedFile = result.files.last;
     } else {
       result.files.clear();
-      throw 'wrong_image_supported_formats .$_jpeg, .$_jpg, .$_png.';
+      throw 'wrong image, supported formats: .$_jpeg, .$_jpg, .$_png.';
     }
   }
 
@@ -49,7 +49,7 @@ class FileProvider {
 
     if (result != null && result.files.last.size >= _maxFileSize) {
       result.files.clear();
-      throw 'file_size_is_too_huge';
+      throw 'file size is too huge';
     } else {
       PlatformFile file = result!.files.last;
       return file;
