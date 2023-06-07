@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,17 +57,23 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: TextField(),
+            ),
+            UnfocusWidget(
+              child: Text(
+                '$_counter',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+      floatingActionButton: const FloatingActionButton(
+        onPressed: null,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: Icon(Icons.add),
       ),
     );
   }
