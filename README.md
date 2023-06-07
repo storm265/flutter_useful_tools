@@ -13,5 +13,6 @@
 
 `firebase_error_handler.dart.dart` - handles firebase errors;
 
+`system_schome_service.dart` - sets device orientation/restores the system overlays;
 
 to be continued...
