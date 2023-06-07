@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
 
 void main() {
@@ -31,13 +32,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  final _fileProvider = FileProvider();
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +49,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            OutlinedButton(
+              onPressed: () async {
+                final avatar = await _fileProvider.pickAvatar();
+                debugPrint('avatar ${avatar.name}');
+              },
+              child: const Text('Pick avatar'),
+            ),
+            OutlinedButton(
+              onPressed: () async {
+                final file = await _fileProvider.pickFile();
+                debugPrint('file ${file.name}');
+              },
+              child: const Text('Pick file'),
+            ),
             const Text(
               'You have pushed the button this many times:',
             ),
@@ -63,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             UnfocusWidget(
               child: Text(
-                '$_counter',
+                'Unfocus me',
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),
