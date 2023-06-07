@@ -1,12 +1,13 @@
 # flutter_useful_tools
-lib/
-connection_checker_mixin.dart - checks network status (true,false)
+`lib/`
 
-file_picker_provider.dart - file/image picker with limited size and validation
+`connection_checker_mixin.dart` - checks network status (true,false)
 
-message_service.dart - custom snackbar;
+`file_picker_provider.dart` - file/image picker with limited size and validation
 
-network_error_service.dart - returns status code after responce in Dio package
+`message_service.dart` - custom snackbar;
+
+`network_error_service.dart` - returns status code after responce in Dio package
 
 
-to be contunied...
+to be continued...
