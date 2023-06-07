@@ -11,7 +11,7 @@
 
 `unfocus_widget.dart`
 
-`firebase_error_handler.dart.dart` - hadles firebase errors;
+`firebase_error_handler.dart.dart` - handles firebase errors;
 
 
 to be continued...
