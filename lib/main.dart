@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
 import 'package:flutter_useful_tools/tools/message_service.dart';
+import 'package:flutter_useful_tools/tools/system_schome_service.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChromeService.setSystemChrome();
   runApp(const MyApp());
 }
 
