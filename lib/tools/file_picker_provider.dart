@@ -1,14 +1,14 @@
 import 'package:file_picker/file_picker.dart';
 
-const _jpeg = 'jpeg';
-const _png = 'png';
-const _jpg = 'jpg';
-
 class FilePickerProvider {
-  PlatformFile? _pickedFile;
+  final _jpeg = 'jpeg';
+  final _png = 'png';
+  final _jpg = 'jpg';
 
   final _maxImageSize = 3000 * 1024; // 3mb
   final _maxFileSize = 26000 * 1024; // 26mb
+
+  PlatformFile? _pickedFile;
 
   bool get _isPickedImage =>
       _pickedFile != null && _pickedFile!.extension != null;
