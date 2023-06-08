@@ -4,7 +4,7 @@ const _jpeg = 'jpeg';
 const _png = 'png';
 const _jpg = 'jpg';
 
-class FileProvider {
+class FilePickerProvider {
   PlatformFile? _pickedFile;
 
   final _maxImageSize = 3000 * 1024; // 3mb

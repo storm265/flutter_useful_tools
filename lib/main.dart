@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final _fileProvider = FileProvider();
+  final _fileProvider = FilePickerProvider();
 
   @override
   Widget build(BuildContext context) {
