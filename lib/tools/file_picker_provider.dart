@@ -5,16 +5,16 @@ class FilePickerProvider {
   final _png = 'png';
   final _jpg = 'jpg';
 
-  final _maxImageSize = 3000 * 1024; // 3mb
-  final _maxFileSize = 26000 * 1024; // 26mb
+  final _maxImageSizeMb = 3000 * 1024;
+  final _maxFileSizeMb = 20000 * 1024;
 
   PlatformFile? _pickedFile;
 
-  bool get _isPickedImage =>
+  bool get _isPickedFile =>
       _pickedFile != null && _pickedFile!.extension != null;
 
   bool get isValidImage =>
-      _isPickedImage && _pickedFile!.extension!.endsWith(_jpeg) ||
+      _isPickedFile && _pickedFile!.extension!.endsWith(_jpeg) ||
               _pickedFile!.extension!.endsWith(_png) ||
               _pickedFile!.extension!.endsWith(_jpg)
           ? true
@@ -33,7 +33,7 @@ class FilePickerProvider {
     if (result != null) {
       _pickedFile = result.files.last;
 
-      if (result.files.last.size >= _maxImageSize) {
+      if (result.files.last.size >= _maxImageSizeMb) {
         result.files.clear();
         throw 'file is too huge';
       } else if (isValidImage) {
@@ -51,7 +51,7 @@ class FilePickerProvider {
 
     if (result == null) {
       throw 'file not picked';
-    } else if (result.files.last.size >= _maxFileSize) {
+    } else if (result.files.last.size >= _maxFileSizeMb) {
       result.files.clear();
       throw 'file size is too huge';
     } else {
