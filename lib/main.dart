@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
 import 'package:flutter_useful_tools/tools/message_service.dart';
+import 'package:flutter_useful_tools/tools/profanity_detector/profanity_detector.dart';
 import 'package:flutter_useful_tools/tools/system_schome_service.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
 
@@ -42,17 +43,21 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // TRY THIS: Try changing the color here to a specific color (to
-        // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
-        // change color while the other colors stay the same.
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
         title: Text(widget.title),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            OutlinedButton(
+              onPressed: () {
+                final hasProfanity =
+                    ProfanityDetector.hasProfanity(word: 'dick');
+                debugPrint('hasProfanity $hasProfanity');
+              },
+              child: const Text('hasProfanity'),
+            ),
             OutlinedButton(
               onPressed: () async {
                 final avatar = await _fileProvider.pickAvatar();
