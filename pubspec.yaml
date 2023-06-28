@@ -38,6 +38,7 @@ dependencies:
   internet_connection_checker:
   file_picker:
   dio:
+  profanity_detector:
 
 dev_dependencies:
   flutter_test:

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
 import 'package:flutter_useful_tools/tools/message_service.dart';
-import 'package:flutter_useful_tools/tools/profanity_detector/profanity_detector.dart';
 import 'package:flutter_useful_tools/tools/system_schome_service.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
+import 'package:profanity_detector/profanity_detector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
