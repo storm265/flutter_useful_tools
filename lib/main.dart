@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
             OutlinedButton(
               onPressed: () {
                 final hasProfanity =
-                    ProfanityDetector.hasProfanity(word: 'dick');
+                    ProfanityDetector.hasProfanity(text: 'dick');
                 debugPrint('hasProfanity $hasProfanity');
               },
               child: const Text('hasProfanity'),

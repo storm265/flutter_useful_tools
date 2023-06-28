@@ -1,10 +1,14 @@
 /*
 Full list of bad words and top swear words banned by Google.
 
-List copied from https://github.com/coffee-and-fun/google-profanity-words
+List copied and modified from https://github.com/coffee-and-fun/google-profanity-words
 */
-List<String> get profanityList => _profanityList;
-final _profanityList = [
+
+/// getter for [_profanityList]
+Set<String> get profanityList => _profanityList;
+
+/// List of awful words
+final _profanityList = {
   '2 girls 1 cup',
   '2g1c',
   '4r5e',
@@ -199,8 +203,6 @@ final _profanityList = [
   'cocksmith',
   'cocksmoker',
   'cocksuck',
-  'cocksuck',
-  'cocksucked',
   'cocksucked',
   'cocksucker',
   'cocksucking',
@@ -240,10 +242,7 @@ final _profanityList = [
   'cuntface',
   'cunthole',
   'cuntlick',
-  'cuntlick',
   'cuntlicker',
-  'cuntlicker',
-  'cuntlicking',
   'cuntlicking',
   'cuntrag',
   'cunts',
@@ -289,7 +288,6 @@ final _profanityList = [
   'dirsa',
   'dirty pillows',
   'dirty sanchez',
-  'dick',
   'dog style',
   'dog-fucker',
   'doggie style',
@@ -427,7 +425,6 @@ final _profanityList = [
   'gang bang',
   'gangbang',
   'gangbanged',
-  'gangbanged',
   'gangbangs',
   'gay sex',
   'gayass',
@@ -507,8 +504,6 @@ final _profanityList = [
   'jiggerboo',
   'jism',
   'jiz',
-  'jiz',
-  'jizm',
   'jizm',
   'jizz',
   'juggs',
@@ -644,7 +639,6 @@ final _profanityList = [
   'one cup two girls',
   'one guy one jar',
   'orgasim',
-  'orgasim',
   'orgasims',
   'orgasm',
   'orgasms',
@@ -690,9 +684,7 @@ final _profanityList = [
   'pissflap',
   'pissflaps',
   'pissin',
-  'pissin',
   'pissing',
-  'pissoff',
   'pissoff',
   'pisspig',
   'playboy',
@@ -839,7 +831,6 @@ final _profanityList = [
   'shitting',
   'shittings',
   'shitty',
-  'shitty',
   'shity',
   'shiz',
   'shiznit',
@@ -963,4 +954,4 @@ final _profanityList = [
   'yiffy',
   'zoophilia',
   '🖕',
-];
+};
