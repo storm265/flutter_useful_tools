@@ -14,6 +14,7 @@
 `firebase_error_handler.dart.dart` - handles firebase errors;
 
 `system_schome_service.dart` - sets device orientation/restores the system overlays;
+
 `is_light_theme.dart` - returns [bool] is current theme is light;
 
 to be continued...
