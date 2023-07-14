@@ -39,6 +39,8 @@ dependencies:
   file_picker:
   dio:
   profanity_detector:
+  firebase_messaging:
+  awesome_notifications:
 
 dev_dependencies:
   flutter_test:
