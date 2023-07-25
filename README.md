@@ -1,4 +1,11 @@
 # flutter_useful_tools
+
+
+`lib/tools/notifications/firebase_push_notifications_service.dart` - foreground, background firebase push notifications;
+
+
+`lib/tools/notifications/local_notifications_service.dart` - for local notifications 
+
 `lib/tools/`
 
 `connection_checker_mixin.dart` - checks network status (true,false);
