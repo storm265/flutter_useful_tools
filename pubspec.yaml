@@ -39,6 +39,7 @@ dependencies:
   firebase_messaging:
   awesome_notifications:
   firebase_storage:
+  googleapis_auth:
 
 dev_dependencies:
   flutter_test:

@@ -23,13 +23,13 @@ class LocalNotificationsService {
     }
   }
 
-  static Future<void> showNotification() =>
+  static Future<void> showNotification({required String title,required String body,}) =>
       AwesomeNotifications().createNotification(
         content: NotificationContent(
           id: 10,
           channelKey: 'basic_channel',
-          title: 'got: ${DateTime.now()}',
-          body: 'body',
+          title: title,
+          body: body,
         ),
       );
 }
