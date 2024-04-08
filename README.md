@@ -1,10 +1,8 @@
 # flutter_useful_tools
 
 
-`lib/tools/notifications/firebase_push_notifications_service.dart` - foreground, background firebase push notifications;
+`lib/tools/notifications/` - foreground, background notifications kit;
 
-
-`lib/tools/notifications/local_notifications_service.dart` - for local notifications 
 
 `lib/tools/`
 
