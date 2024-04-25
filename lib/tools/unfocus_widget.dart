@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// Disables keyboard on tap
 class UnfocusWidget extends StatelessWidget {
   final Widget child;
 

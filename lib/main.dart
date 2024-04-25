@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_useful_tools/tools/mixins/network_status_mixin.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
 import 'package:flutter_useful_tools/tools/message_service.dart';
 import 'package:flutter_useful_tools/tools/system_chrome_service.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
-import 'package:profanity_detector/profanity_detector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,7 +36,7 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage> with NetworkStatusMixin {
   final _fileProvider = FilePickerProvider();
 
   @override
@@ -52,11 +52,16 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             OutlinedButton(
               onPressed: () {
-                final hasProfanity =
-                    ProfanityDetector.hasProfanity(text: 'dick');
-                debugPrint('hasProfanity $hasProfanity');
+                onNetworkStatus(
+                  whenOnline: () {
+                    print('online mode');
+                  },
+                  whenDisconnected: () {
+                    print('online mode');
+                  },
+                );
               },
-              child: const Text('hasProfanity'),
+              child: const Text('NetworkStatusMixin'),
             ),
             OutlinedButton(
               onPressed: () async {

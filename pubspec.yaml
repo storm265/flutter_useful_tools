@@ -35,7 +35,6 @@ dependencies:
   internet_connection_checker:
   file_picker:
   dio:
-  profanity_detector:
   firebase_messaging:
   awesome_notifications:
   firebase_storage:
