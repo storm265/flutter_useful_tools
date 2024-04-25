@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_useful_tools/tools/mixins/network_status_mixin.dart';
+import 'package:flutter_useful_tools/tools/network_status_mixin.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
 import 'package:flutter_useful_tools/tools/message_service.dart';
 import 'package:flutter_useful_tools/tools/system_chrome_service.dart';
