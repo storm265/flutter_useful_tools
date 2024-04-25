@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MessageService {
+class SnackBarUtil {
   static ScaffoldFeatureController<SnackBar, SnackBarClosedReason>
       displaySnackbar({
     required BuildContext context,

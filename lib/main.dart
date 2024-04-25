@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_useful_tools/tools/network_status_mixin.dart';
 import 'package:flutter_useful_tools/tools/file_picker_provider.dart';
-import 'package:flutter_useful_tools/tools/message_service.dart';
+import 'package:flutter_useful_tools/tools/snackbar_util.dart';
 import 'package:flutter_useful_tools/tools/system_chrome_service.dart';
 import 'package:flutter_useful_tools/tools/unfocus_widget.dart';
 
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> with NetworkStatusMixin {
             ),
             OutlinedButton(
               onPressed: () async {
-                MessageService.displaySnackbar(
+                SnackBarUtil.displaySnackbar(
                   context: context,
                   message:
                       'Hello world Hello worldHello worldHello worldHello worldHello world',
