@@ -23,7 +23,10 @@ class LocalNotificationsService {
     }
   }
 
-  static Future<void> showNotification({required String title,required String body,}) =>
+  static Future<void> showNotification({
+    required String title,
+    required String body,
+  }) =>
       AwesomeNotifications().createNotification(
         content: NotificationContent(
           id: 10,
